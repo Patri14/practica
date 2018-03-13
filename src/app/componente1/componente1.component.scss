@@ -1,93 +1,31 @@
-/* input{
-    padding: 0.4em 0.25em;
-    width: 100%;
-    background: transparent;
-    color: #AFB5BB;
-    font-size: 1.55em;
-    position: relative;
-    display: block;
-    float: right;
-    padding: 0.8em;
-    border: none;
-    border-radius: 0;
-    background: #f0f0f0;
-    color: #aaa;
-    font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    -webkit-appearance: none;
-}
-button{
-    
-    border-color: #ECEFF1;
-    width: 240px;
-    
-    border-radius: 40px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    float: left;
-    min-width: 150px;
-    max-width: 250px;
-    display: block;
-    margin: 1em;
-    padding: 1em 2em;
-    border: none;
-    background: none;
-    color: white;
-   
-    position: relative;
-    z-index: 1;
-    
-   
-}
 
-button::before {
-    border-color: #fff;
-    -webkit-transform: scale3d(0.7, 0.7, 1);
-    transform: scale3d(0.7, 0.7, 1);
-    border: 2px solid #7986cb;
-}
-
-button::after {
-    background: #37474f;
-    content: '';
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
-    transition: transform 0.3s, background-color 0.3s;
-    -webkit-transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
-} */
-
-.input-bar {
+.input-buscar {
     display: table;
     width: 100%;
 }
 
-.input-bar-item {
+.input-buscar-item {
     display: table-cell;
     padding: 0.4em 0.25em;
-    background: transparent;
     color: #AFB5BB;
     font-size: 1.55em;
     position: relative;
     padding: 0.8em;
     border: none;
     border-radius: 0;
-    background: #f0f0f0;
     color: #aaa;
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none;
 }
 
-.input-bar-item > button {
+.input-buscar-item > button {
     margin-left: 5px;
+    border-color: #ECEFF1;
+    border-radius: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;   
 }
     
 .width100 {
