@@ -1,0 +1,23 @@
+<!--valores para depurar-->
+<p>VALOR: {{formulario.value | json}}</p>
+<p>ESTADO: {{formulario.status | json}}</p>
+
+<!--fin valores para depurar-->
+
+<form novalidate [formGroup]="formulario" (ngSubmit)="enviar($event)">
+  <input formControlName="nombre">
+  <p *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.touched" class="text-danger">
+    *Error por lo que sea
+  </p>
+  
+  <input class="btn" type="submit" value="enviar" >
+</form>
+
+<hr>
+<h2>Doble binding o Banana in a Box</h2>
+<p><b>Del ts al HTML</b></p>
+{{fruta}}
+
+<p><b>Del HTML al ts</b></p>
+<input type="text" [(ngModel)]="fruta">
+

@@ -1,0 +1,27 @@
+
+
+   
+    <div class="input-bar">
+        <div class="input-bar-item width100">
+            
+            <div class="form-group">
+                <input placeholder="Buscar" [(ngModel)]="id" autofocus class="form-control width100">
+            </div>
+        </div>
+    
+        <div class="input-bar-item">
+            <button type="button" class="btn btn-info" (click)="buscarDato(term)">Buscar</button>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <ul>
+            <li>{{ dato.title }}</li>
+          </ul>
+    </div>
+
+
+
+
+
+
