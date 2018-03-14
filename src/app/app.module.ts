@@ -7,13 +7,24 @@ import {ReactiveFormsModule, FormControl, FormsModule} from '@angular/forms';
 //componentes
 import { AppComponent } from './app.component';
 import { Componente1Component } from './componente1/componente1.component';
+import { InmobiliariaComponent } from './inmobiliaria/inmobiliaria.component';
+import { ListadocasaComponent } from './inmobiliaria/listadocasa/listadocasa.component';
+import { DetallecasaComponent } from './inmobiliaria/detallecasa/detallecasa.component';
+import { NuevacasaComponent } from './inmobiliaria/nuevacasa/nuevacasa.component';
 
 // Importar HttpClientModule
 import {HttpClientModule} from '@angular/common/http';
 
 //servicios
 import { ServicioService } from './providers/servicio.service';
+import { InmobiliariaService } from './providers/inmobiliaria.service';
+
+//formulario
 import { FormularioBasicoComponent } from './formulario-basico/formulario-basico.component';
+import { CasaFilter } from './pipes/casaFilter.pipe';
+
+
+
 
 
 
@@ -22,7 +33,12 @@ import { FormularioBasicoComponent } from './formulario-basico/formulario-basico
   declarations: [
     AppComponent,
     Componente1Component,
-    FormularioBasicoComponent 
+    FormularioBasicoComponent,
+    InmobiliariaComponent,
+    ListadocasaComponent,
+    DetallecasaComponent,
+    NuevacasaComponent,
+    CasaFilter 
   ],
   imports: [
     BrowserModule,
@@ -32,6 +48,7 @@ import { FormularioBasicoComponent } from './formulario-basico/formulario-basico
   ],
   providers: [
     ServicioService,
+    InmobiliariaService,
     HttpClientModule // para servicios rest
   ],
   bootstrap: [AppComponent]
