@@ -96,7 +96,8 @@
 .detalles_footer {
     float: left;
     width: 100%;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
 
     p {
         float: left;
