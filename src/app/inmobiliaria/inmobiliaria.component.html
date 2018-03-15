@@ -1,14 +1,13 @@
 <div class="container">
-  <h1 class='retroshadow'>Inmobiliaria</h1>
+        <div class="section-heading">
+            <h2 class="fadeInLeft wow animated">Inmobiliaria</h2>
+            <!-- <h3>Inmobiliaria</h3> -->
+        </div>
   <div class="row">
       
-        <div class="col-md-4">
+        <div class="col-md-4 sombra-lista">
           <div class="panel panel-default">
-              <div class="panel-heading">
-                  <h3 class="panel-title">Listado de casa</h3>   
-              </div>
-              
-              <div class="panel-body">
+            <div class="panel-body">
                     <!--buscar-->
                     <div class="bloque equal-padding">
                         <div class="form-group input-group">
@@ -18,80 +17,68 @@
                             </span>
                         </div>
                     </div>
-
+                    <hr>
                     <!--alquiler o venta-->
                     <div class="checkbox checkbox-primary margin-none">
-                      <input id="radius50" type="checkbox" checked="">
+                      <input id="radius50" type="checkbox"  [(ngModel)]="alquiler" name="alquiler">
                       <label for="radius50">Alquiler</label>
                     </div>
                   
                     <div class="checkbox checkbox-primary margin-none">
-                      <input id="radius50" type="checkbox" checked="">
+                      <input id="radius50" type="checkbox"  [(ngModel)]="venta" name="venta">
                       <label for="radius50">Venta</label>
                     </div>
-                
+                    <hr>
                     <!--precio-->
-                    <div class="category">Precio</div>
+                    <div class="category">
+                        <h5>Precio</h5></div>
                     <div class="form-group input-group">
                         <div class="row">
-                          <div class="col-xs-6 ">
+                          <!-- <div class="col-xs-6 ">
                             <input class="form-control" type="text" placeholder="Min ..">
                           </div>
                           <div class="col-xs-6">
                             <input class="form-control" type="text" placeholder="Max ..">
-                          </div>
-                        </div>
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>  
-                  
-
-                  
-                  <!-- <div class="lista_recetas">
+                          </div> -->
+                          <div class="price-controls">
+                                <input class="min-precio" type="text" value="0" [(ngModel)]="precioMin">
+                                A <input class="max-precio" type="text" value="0" [(ngModel)]="precioMax">
+                            </div>
                         
-                      <ul class="list-group">
-                         
-                           <li *ngFor="let casa of aCasa |filter : searchText" class="list-group-item" (click)="seleccionarCasa(casa)" >
-                             <img class="img_receta" src="{{casa.foto}}" alt="{{casa.nombre}}">
-                             <a><b>{{casa.nombre}}</b> </a>
-                          </li> -
-                          <!-- <li *ngFor="let casa of aCasa" class="list-group-item" (click)="seleccionarCasa(casa)" >
-                              <img class="img_receta" src="{{casa.foto}}" alt="{{casa.nombre}}">
-                              <a><b>{{casa.nombre}}</b> </a>
-                           </li> 
-                      </ul>
-                  </div> -->
+                        <div>
+                          <button type="button" class="btn btn-outline-primary">
+                              <i class="fas fa-search"></i>
+                        </button>
+                        </div>
+                    </div>
+                      </div>  
+                
 
-                 
+                      <div class="row">
                         <!-- Item Property-->
-                        <div class="col-xs-6 col-sm-6" *ngFor="let casa of aCasa |filter : searchText"  (click)="seleccionarCasa(casa)" >
+                        <div class="col-xs-6 col-sm-6" *ngFor="let casa of aCasa |filter : searchText : venta : alquiler"  (click)="seleccionarCasa(casa)" >
                             <div class="item">
                                 <div class="cabecera">
-                                   
-                                      <div class="title rent"></div>
-                                      <img src="{{casa.foto}}" alt="{{casa.nombre}}">
-                                      <h5>{{casa.nombre}}</h5>
-                                   
-                                </div>                        
+                                    <img src="{{casa.foto}}" alt="{{casa.nombre}}">
+                                    <h5>{{casa.nombre}}</h5>
+                                 </div>                        
                                 <div class="informacion">                                  
                                     <ul>
-                                      <li><strong>Precio</strong><span>{{casa.precio}}</span></li>
+                                      <li><strong>Precio</strong><span>{{casa.precio}} €</span></li>
                                     </ul>                                 
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <!-- Item Property-->
                 
           </div><!--fin panel-body-->
       </div><!--fin panel-default-->
     </div> <!--fin listado casa-->
 
-        <div class="col-md-8">
+        <div class="col-md-8 sombra">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Detalle casa</h3>
-                </div>
+               
                     
                 <div class="panel-body">
                             

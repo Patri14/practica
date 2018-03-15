@@ -9,9 +9,15 @@ import { Casa } from '../../model/casa'
 export class DetallecasaComponent implements OnInit {
 
   @Input ('casaDelInput') casa : Casa;
-  constructor() { }
+  constructor() {
+      
+    console.log('detalleComponent constructor');
+
+   }
 
   ngOnInit() {
+
+    console.log('detalleComponent OnInit');
   }
 
 }

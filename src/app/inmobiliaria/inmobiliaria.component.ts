@@ -13,6 +13,12 @@ export class InmobiliariaComponent implements OnInit {
 
   aCasa : Array<Casa>; //array casteado con tipo casa
   casaSelec : Casa;
+  venta:boolean;
+  alquiler:boolean;
+
+  //filtro
+  precioMin:number;
+  precioMax:number;
 
   //en el constructor inicializamos los atributos
   //inyectamos para poder usar este servicio en Inmobiliaria
@@ -20,6 +26,7 @@ export class InmobiliariaComponent implements OnInit {
     console.log('InmobiliariaComponent constructor');     
     this.aCasa =[];
     this.casaSelec = new Casa("");
+    
    
    }
 
@@ -38,7 +45,10 @@ export class InmobiliariaComponent implements OnInit {
     this.inmobiliariaService.getCasas().subscribe(
       resultado => {
         console.debug('peticion correcta %o', resultado);
-        this.mapeo(resultado);  
+        this.mapeo(resultado);
+        this.casaSelec = this.aCasa[0];
+        this.venta= true;
+        this.alquiler= true;  
       },
       error=>{
         console.warn('peticion incorrecta %o', error);
@@ -67,7 +77,7 @@ export class InmobiliariaComponent implements OnInit {
       this.aCasa.push(casa);
     });
 
-    this.casaSelec = this.aCasa[0];
+    
   }
 
    //esta casa la recibe el hijo como input

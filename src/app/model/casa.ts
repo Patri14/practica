@@ -23,7 +23,7 @@ export class Casa{
         
         //inicializamos las variables
         this.nombre = nombre;
-         this.alquiler = alquiler;
+        this.alquiler = alquiler;
         this.habitaciones = habitaciones;
         if ( foto ){
             this.foto = foto;

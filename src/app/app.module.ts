@@ -8,7 +8,6 @@ import {ReactiveFormsModule, FormControl, FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Componente1Component } from './componente1/componente1.component';
 import { InmobiliariaComponent } from './inmobiliaria/inmobiliaria.component';
-import { ListadocasaComponent } from './inmobiliaria/listadocasa/listadocasa.component';
 import { DetallecasaComponent } from './inmobiliaria/detallecasa/detallecasa.component';
 import { NuevacasaComponent } from './inmobiliaria/nuevacasa/nuevacasa.component';
 
@@ -35,7 +34,6 @@ import { CasaFilter } from './pipes/casaFilter.pipe';
     Componente1Component,
     FormularioBasicoComponent,
     InmobiliariaComponent,
-    ListadocasaComponent,
     DetallecasaComponent,
     NuevacasaComponent,
     CasaFilter 
